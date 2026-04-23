@@ -7,14 +7,14 @@ const loginBtn = document.getElementById('loginBtn')
 
 observeAuth((user) => {
     if (user) {
-        window.logation.href = './../../dashboard.html'
+        window.location.href = './../../dashboard.html'
     }
 })
 
-form?.addEventListener('submit', (e) => {
+form?.addEventListener('submit', async (e) => {
     e.preventDefault()
 
-    hideAlert(loginAlert)
+    hideAlert('loginAlert')
 
     const email = emailInput.value.trim()
     const password = passwordInput.value.trim()
